@@ -1,0 +1,59 @@
+/* src/index.css */
+
+:root {
+  --pistachio: #a5d26a;
+  --vanilla: #f7df9c;
+  --avocado: #5f8a1d;
+  --asparagus: #74a533;
+  --persian-orange: #de9254;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.landing-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  z-index: 10; /* Ensure text stays above images initially */
+}
+.welcome-heading {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--avocado);
+  margin-top: 50px;
+}
+
+.thali-container {
+  position: relative;
+  min-height: 400vh;
+  width: 100%;
+}
+
+.thali-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thali-image:nth-child(1) { z-index: -1; }
+.thali-image:nth-child(2) { z-index: 1; }
+.thali-image:nth-child(3) { z-index: 1; }
+.thali-image:nth-child(4) { z-index: 1; }
+.thali-image:nth-child(5) { z-index: 1; }
+.thali-image:nth-child(6) { z-index: 1; }
