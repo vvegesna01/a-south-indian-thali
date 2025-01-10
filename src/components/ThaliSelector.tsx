@@ -46,7 +46,7 @@ const ThaliSelector: React.FC = () => {
           gap: "20px",
           height: "auto",
           gridTemplateColumns: "repeat(3, 1fr)",
-          gridTemplateRows: "repeat(3, 1fr)",
+          gridTemplateRows: "repeat(2, 1fr)",
           gridTemplateAreas: `
             "box1 box2 box3"
             "box4 center box5"
@@ -58,7 +58,7 @@ const ThaliSelector: React.FC = () => {
         <div
           style={{
             gridColumn: "span 2",
-            backgroundColor: "#f5f5f5",
+            backgroundColor: "#f7df9c",
             borderRadius: "12px",
             padding: "24px",
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
@@ -88,7 +88,7 @@ const ThaliSelector: React.FC = () => {
         {/* Box 2 (Top Center) */}
         <div
           style={{
-            backgroundColor: "lightblue",
+            backgroundColor: "#5f8a1d",
             borderRadius: "12px",
             padding: "24px",
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
@@ -118,7 +118,7 @@ const ThaliSelector: React.FC = () => {
         {/* Box 3 (Top Right) */}
         <div
           style={{
-            backgroundColor: "lightgreen",
+            backgroundColor: "#de9254",
             borderRadius: "12px",
             padding: "24px",
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
@@ -148,7 +148,7 @@ const ThaliSelector: React.FC = () => {
         {/* Box 4 (Left Center) */}
         <div
           style={{
-            backgroundColor: "lightyellow",
+            backgroundColor: "#a5d26a",
             borderRadius: "12px",
             padding: "24px",
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
@@ -179,7 +179,7 @@ const ThaliSelector: React.FC = () => {
         <div
           style={{
             gridArea: "center",
-            backgroundColor: "lightpink",
+            backgroundColor: "#74a533",
             borderRadius: "12px",
             padding: "24px",
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",

@@ -1,7 +1,9 @@
 "use client";
+import { transcode } from "buffer";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { transform } from "next/dist/build/swc/generated-native";
 import Image from "next/image";
-import { useRef, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 
 // Utility function to generate motion styles
 const getMotionStyles = (
@@ -14,6 +16,7 @@ const getMotionStyles = (
   translateY: useTransform(scrollYProgress, [start, end], [120, 50]),
   translateX: useTransform(scrollYProgress, [start, end], ["10vh", "-15vw"]),
 });
+
 
 const Thali = () => {
   const containerRef = useRef(null);
@@ -28,6 +31,13 @@ const Thali = () => {
     };
   }, []);
 
+  
+ // Fade out text completely by 30% scroll
+ const mainTextOpacity = useTransform(scrollYProgress, [0.90, 0.80], [1, 0]);
+ const subTextOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+ const textScale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
+ const textY = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
+  
   return (
     <motion.div
       className="fixed inset-0 bg-gradient-to-b from-green-50 to-green-100"
@@ -70,19 +80,20 @@ const Thali = () => {
                 style={{ transform: "translateX(30%) translateY(20%)" }}
               />
             </motion.div>
-
+            
             {/* Idli */}
             <motion.div
               className="motion-image absolute z-30"
               style={getMotionStyles(scrollYProgress, 0.50, 0.70)}
-              whileHover={{rotate:"30"}}
+              whileHover={{rotate:"5deg"}}
             >
               <Image
-                src="/assets/idli.svg"
+                src="/assets/idli.png"
                 alt="Idli"
                 width={350}
-                height={300}
+                height={400}
                 className="object-contain sm:w-[200px] sm:h-[150px]"
+                style={{transform:"translateX(5%) translateY(-5%)"}}
               />
             </motion.div>
 
@@ -140,7 +151,26 @@ const Thali = () => {
             </motion.div>
           </div>
         </div>
+
+      <motion.div
+      style={{ 
+        opacity: mainTextOpacity,
+        scale: textScale,
+        y: textY
+      }}
+      className="flex flex-col items-center"
+    >
+        <Image
+              src="/assets/south_indian_breakfast.png"
+              alt="south_indian_breakfast_text"
+              width={700}
+              height={500}
+              className="object-contain"
+              style={{marginBottom:"0px", transform:"translateX(60vh) translateY(45vh)"}}
+            />
+             </motion.div>
       </div>
+     
     </motion.div>
   );
 };

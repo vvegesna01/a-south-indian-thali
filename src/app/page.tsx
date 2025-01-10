@@ -3,7 +3,7 @@ import Thali from "@/components/Thali";
 import WelcomeText from "@/components/welcome";
 // import test from "@/components/test";
 import ThaliSelector from "@/components/ThaliSelector";
-
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -13,6 +13,7 @@ export default function Home() {
         <WelcomeText />
         <Thali />
         <ThaliSelector/>
+        <Footer></Footer>
         </div>
   );
 }
