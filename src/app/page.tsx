@@ -1,14 +1,19 @@
 // import Image from "next/image";
-import MyComponent from "@/components/test";
-import LandingPage from "../components/LandingPage";
+import Thali from "@/components/Thali";
+import WelcomeText from "@/components/welcome";
+// import test from "@/components/test";
+import ThaliSelector from "@/components/ThaliSelector";
+import ThaliSelectorGrid from "@/components/ThaliSelector";
 
 
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-
-     <LandingPage/>
-     </div>
+        // Set a height that allows for scrolling
+        <div className="h-[300vh] bg-gradient-to-b from-green-50 to-green-100">
+        <WelcomeText />
+        <Thali />
+        <ThaliSelectorGrid/>
+        </div>
   );
 }
