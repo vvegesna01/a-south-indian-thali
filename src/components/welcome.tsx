@@ -31,7 +31,7 @@ const WelcomeText = () => {
      <Image
               src="/header.png"
               alt="logo"
-              width={900}
+              width={700}
               height={500}
               className="object-contain"
               style={{marginBottom:"0px"}}

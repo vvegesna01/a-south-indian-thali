@@ -32,8 +32,8 @@ const Thali = () => {
     <motion.div
       className="fixed inset-0 bg-gradient-to-b from-green-50 to-green-100"
     >
-      <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 p-8 sm:p-4">
-        <div ref={containerRef} className="relative h-[200vh]">
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 p-1 sm:p-4">
+        <div ref={containerRef} className="relative h-[100vh]">
           <div className="absolute inset-0 flex flex-wrap justify-center gap-8 sm:gap-4">
             {/* Banana Leaf */}
             <motion.div
@@ -135,7 +135,7 @@ const Thali = () => {
                 width={100}
                 height={400}
                 className="object-contain sm:w-[250px] sm:h-[200px]"
-                style={{transform:"translateX(75%) translateY(45%)"}}
+                style={{transform:"translateX(55%) translateY(45%)"}}
               />
             </motion.div>
           </div>
