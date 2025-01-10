@@ -8,13 +8,9 @@ const WelcomeText = () => {
   
   // Fade out text completely by 30% scroll
   const mainTextOpacity = useTransform(scrollYProgress, [0, 0.50], [1, 0]);
-  const subTextOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const textScale = useTransform(scrollYProgress, [0, 0.3], [1, 0.8]);
   const textY = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
   
- // Button animations
- const buttonOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
- const buttonY = useTransform(scrollYProgress, [0, 0.2], [50, 0]);
  
   
   return (

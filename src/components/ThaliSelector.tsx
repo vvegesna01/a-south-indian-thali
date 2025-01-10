@@ -7,7 +7,6 @@ const ThaliSelector: React.FC = () => {
   const { scrollYProgress } = useScroll();
   // Fade out text completely by 30% scroll
   const mainTextOpacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-  const subTextOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const textScale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
   const textY = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
 

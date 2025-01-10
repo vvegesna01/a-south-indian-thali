@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Arvo} from "next/font/google"; // Import Russo One here
+import { Geist, Geist_Mono} from "next/font/google"; // Import Russo One here
 import "./globals.css";
 
 // Geist Sans font

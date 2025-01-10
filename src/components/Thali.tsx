@@ -1,9 +1,7 @@
 "use client";
-import { transcode } from "buffer";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { transform } from "next/dist/build/swc/generated-native";
 import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 // Utility function to generate motion styles
 const getMotionStyles = (
@@ -80,7 +78,7 @@ const Thali = () => {
                 style={{ transform: "translateX(30%) translateY(20%)" }}
               />
             </motion.div>
-            
+
             {/* Idli */}
             <motion.div
               className="motion-image absolute z-30"
